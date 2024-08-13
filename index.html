@@ -41,19 +41,21 @@
 					
 
                 </section>
-				<header style="padding-top: 2em"></header>
+				<header style="padding-top: 1em"></header>
                 	<div class="container" style="text-align: center;">
                     	<a href="https://www.overleaf.com/project/662fd7717af93800a6ad83ab" class="button large">Paper</a>
                     	<a href="https://github.com/ARCLab-MIT/space-nvs" class="button large">Code</a>
                 	</div>
 				</header>
-                <section id="abstract" class="container">
-                    <h2>Abstract</h2>
-                    <p>Novel view synthesis (NVS) enables the generation of new images of a scene or converting a set of 2D images into a comprehensive 3D model. In the context of Space Domain Awareness, since space is becoming increasingly congested, NVS can accurately map space objects and debris, improving the safety and efficiency of space operations. Similarly, in Rendezvous and Proximity Operations missions, 3D models can provide details about a target object's shape, size, and orientation, allowing for better planning and prediction of the target's behavior.</p>
-                    <p>In this work, we explore the generalization abilities of these reconstruction techniques, aiming to avoid the necessity of retraining for each new scene, by presenting a novel approach to 3D spacecraft reconstruction from single-view images by fine-tuning the Zero123 XL, a state-of-the-art single-view reconstruction model, on a high-quality dataset of 190 high-quality spacecraft models and integrating it into the DreamGaussian framework.</p>
-                    <p>For the implementation, we use spacecraft images obtained from the Satellite Pose Estimation and 3D Reconstruction (SPE3R) dataset, which has a dataset of 64 unique spacecraft 3D models, allowing for generalization across common spacecraft 3D models. The performance of the reconstruction techniques is evaluated with standard metrics (CLIP, SSIM, PSNR, LPIPS) on that dataset.</p>
-                    <p>Our method addresses the lack of domain-specific 3D reconstruction tools in the space industry by leveraging state-of-the-art diffusion models and 3D Gaussian splatting techniques. We demonstrate significant improvements in reconstruction quality across multiple metrics, including CLIP score (+0.33%), PSNR (+2.53%), SSIM (+2.38%), and LPIPS (+0.16%) on a test set of 30 previously unseen spacecraft images. This approach maintains the efficiency of the DreamGaussian framework while enhancing the accuracy and detail of spacecraft reconstructions. Our work contributes to the advancement of 3D modeling capabilities in the aerospace industry, potentially reducing costs and improving efficiency in spacecraft design, mission planning, and virtual simulations.</p>
-                </section>
+				<header style="padding-top: 1em"></header>
+					<section id="abstract" class="container">
+						<h2>Abstract</h2>
+						<p>Novel view synthesis (NVS) enables the generation of new images of a scene or converting a set of 2D images into a comprehensive 3D model. In the context of Space Domain Awareness, since space is becoming increasingly congested, NVS can accurately map space objects and debris, improving the safety and efficiency of space operations. Similarly, in Rendezvous and Proximity Operations missions, 3D models can provide details about a target object's shape, size, and orientation, allowing for better planning and prediction of the target's behavior.</p>
+						<p>In this work, we explore the generalization abilities of these reconstruction techniques, aiming to avoid the necessity of retraining for each new scene, by presenting a novel approach to 3D spacecraft reconstruction from single-view images by fine-tuning the Zero123 XL, a state-of-the-art single-view reconstruction model, on a high-quality dataset of 190 high-quality spacecraft models and integrating it into the DreamGaussian framework.</p>
+						<p>For the implementation, we use spacecraft images obtained from the Satellite Pose Estimation and 3D Reconstruction (SPE3R) dataset, which has a dataset of 64 unique spacecraft 3D models, allowing for generalization across common spacecraft 3D models. The performance of the reconstruction techniques is evaluated with standard metrics (CLIP, SSIM, PSNR, LPIPS) on that dataset.</p>
+						<p>Our method addresses the lack of domain-specific 3D reconstruction tools in the space industry by leveraging state-of-the-art diffusion models and 3D Gaussian splatting techniques. We demonstrate significant improvements in reconstruction quality across multiple metrics, including CLIP score (+0.33%), PSNR (+2.53%), SSIM (+2.38%), and LPIPS (+0.16%) on a test set of 30 previously unseen spacecraft images. This approach maintains the efficiency of the DreamGaussian framework while enhancing the accuracy and detail of spacecraft reconstructions. Our work contributes to the advancement of 3D modeling capabilities in the aerospace industry, potentially reducing costs and improving efficiency in spacecraft design, mission planning, and virtual simulations.</p>
+					</section>
+				</header>
 
                 <!-- Images section -->
                 <section id="images" class="container">
