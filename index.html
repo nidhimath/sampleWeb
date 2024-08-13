@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!-- <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -154,4 +154,120 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+</html> -->
+
+
+<!DOCTYPE HTML>
+<!--
+    Phantom by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>SpaceNVS</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" href="images/logo_colored.png" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">SpaceNVS</span>
+                </a>
+                <nav style="display: inline-block">
+                    <ul>
+                        <li><a href="#abstract">Abstract</a></li>
+                        <li><a href="https://www.overleaf.com/project/662fd7717af93800a6ad83ab">Paper</a></li>
+                        <li><a href="https://github.com/ARCLab-MIT/space-nvs">Code</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <header style="padding-top: 5em">
+                    <h1>SpaceNVS: Novel View Synthesis in Space Domain Awareness</h1>
+                    <p>Authors: Nidhi Mathihalli, Audrey Wei, Giovanni Lavezzi, and Victor Fer from MIT.</p>
+                </header>
+                <div class="container" style="text-align: center">
+                    <a href="https://www.overleaf.com/project/662fd7717af93800a6ad83ab" class="button large">Paper</a>
+                    <a href="https://github.com/ARCLab-MIT/space-nvs" class="button large">Code</a>
+                </div>
+                <section id="abstract" class="container">
+                    <h2>Abstract</h2>
+                    <p>Novel view synthesis (NVS) enables the generation of new images of a scene or converting a set of 2D images into a comprehensive 3D model. In the context of Space Domain Awareness, since space is becoming increasingly congested, NVS can accurately map space objects and debris, improving the safety and efficiency of space operations. Similarly, in Rendezvous and Proximity Operations missions, 3D models can provide details about a target object's shape, size, and orientation, allowing for better planning and prediction of the target's behavior.</p>
+                    <p>In this work, we explore the generalization abilities of these reconstruction techniques, aiming to avoid the necessity of retraining for each new scene, by presenting a novel approach to 3D spacecraft reconstruction from single-view images by fine-tuning the Zero123 XL, a state-of-the-art single-view reconstruction model, on a high-quality dataset of 190 high-quality spacecraft models and integrating it into the DreamGaussian framework.</p>
+                    <p>For the implementation, we use spacecraft images obtained from the Satellite Pose Estimation and 3D Reconstruction (SPE3R) dataset, which has a dataset of 64 unique spacecraft 3D models, allowing for generalization across common spacecraft 3D models. The performance of the reconstruction techniques is evaluated with standard metrics (CLIP, SSIM, PSNR, LPIPS) on that dataset.</p>
+                    <p>Our method addresses the lack of domain-specific 3D reconstruction tools in the space industry by leveraging state-of-the-art diffusion models and 3D Gaussian splatting techniques. We demonstrate significant improvements in reconstruction quality across multiple metrics, including CLIP score (+0.33%), PSNR (+2.53%), SSIM (+2.38%), and LPIPS (+0.16%) on a test set of 30 previously unseen spacecraft images. This approach maintains the efficiency of the DreamGaussian framework while enhancing the accuracy and detail of spacecraft reconstructions. Our work contributes to the advancement of 3D modeling capabilities in the aerospace industry, potentially reducing costs and improving efficiency in spacecraft design, mission planning, and virtual simulations.</p>
+                </section>
+
+                <!-- Images section -->
+                <section id="images" class="container">
+                    <div class="row">
+                        <div class="col-4 col-12-medium">
+                            <section class="first">
+                                <img src="images/space1.jpg" alt="Space Image 1" />
+                                <header>
+                                    <h2>Space Scene 1</h2>
+                                </header>
+                            </section>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <section class="middle">
+                                <img src="images/space2.jpg" alt="Space Image 2" />
+                                <header>
+                                    <h2>Space Scene 2</h2>
+                                </header>
+                            </section>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+                                <img src="images/space3.jpg" alt="Space Image 3" />
+                                <header>
+                                    <h2>Space Scene 3</h2>
+                                </header>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Contact Us</h2>
+                    <p>Feel free to email any questions to <a href="mailto:nidhi@mathihalli.com">nidhi@mathihalli.com</a>!</p>
+                    <ul class="copyright">
+                        <li>&copy; SpaceNVS. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
