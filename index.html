@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <!-- Include Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/OBJLoader.js"></script>
 </head>
 <body class="is-preload">
     <!-- Wrapper -->
@@ -87,7 +90,7 @@
                                     Your browser does not support the video tag.
                                 </video>
                                 <header>
-                                    <h2>Argo Video</h2>
+                                    <h2>Argo</h2>
                                 </header>
                             </section>
                         </div>
@@ -98,18 +101,49 @@
                                     Your browser does not support the video tag.
                                 </video>
                                 <header>
-                                    <h2>Astre Video</h2>
+                                    <h2>Astre</h2>
                                 </header>
                             </section>
                         </div>
                         <div class="col-4 col-12-medium">
                             <section class="last">
                                 <video controls width="100%">
-                                    <source src="videos/curiosity.mp4" type="video/mp4">
+                                    <source src="videos/curiosity_scarecrow_rover.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <header>
-                                    <h2>Curiosity Scarecrow Rover Video</h2>
+                                    <h2>Curiosity Scarecrow Rover</h2>
+                                </header>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Meshes section -->
+                <section id="meshes" class="container">
+                    <h2>Meshes</h2>
+                    <div class="row">
+                        <div class="col-4 col-12-medium">
+                            <section class="first">
+                                <div id="mesh1" class="mesh-viewer"></div>
+                                <header>
+                                    <h2>Argo</h2>
+                                </header>
+                            </section>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <section class="middle">
+                                <div id="mesh2" class="mesh-viewer"></div>
+                                <header>
+                                    <h2>Astre</h2>
+                                </header>
+                            </section>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+                                <div id="mesh3" class="mesh-viewer"></div>
+                                <header>
+                                    <h2>Curiosity Scarecrow Rover</h2>
                                 </header>
                             </section>
                         </div>
@@ -145,6 +179,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/meshes.js"></script>
 
 </body>
 </html>
