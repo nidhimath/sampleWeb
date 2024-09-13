@@ -1,52 +1,36 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Three.js scene
+// Initialize the Three.js scene
+function initMeshViewer() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 5;
-
-    // Initialize renderer
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(300, 300); // Set to desired size of the mesh container
-    renderer.setPixelRatio(window.devicePixelRatio);
+    
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('mesh-container').appendChild(renderer.domElement);
 
-    // Add renderer to all mesh containers
-    document.querySelectorAll('.mesh-viewer').forEach(container => {
-        container.appendChild(renderer.domElement.cloneNode(true));
+    // Add a light to the scene
+    const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(1, 1, 1).normalize();
+    scene.add(directionalLight);
+
+    // Load OBJ files
+    const loader = new THREE.OBJLoader();
+    loader.load('mesh/lunarlandernofoil-carbajal.obj', function (object) {
+        scene.add(object);
+        object.position.y = -1; // Adjust object position if needed
     });
 
-    // Create and animate each mesh
-    const loader = new THREE.OBJLoader();
-    const meshes = [
-        { id: 'mesh1', url: 'path/to/mesh1.obj' },
-        { id: 'mesh2', url: 'path/to/mesh2.obj' },
-        { id: 'mesh3', url: 'path/to/mesh3.obj' }
-    ];
+    camera.position.z = 5;
 
-    function addMesh(id, url) {
-        const container = document.getElementById(id);
-        if (!container) return;
-
-        const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-        camera.position.z = 5;
-
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(container.clientWidth, container.clientHeight);
-        container.appendChild(renderer.domElement);
-
-        loader.load(url, (object) => {
-            scene.add(object);
-
-            function animate() {
-                requestAnimationFrame(animate);
-                object.rotation.y += 0.01; // Rotate mesh for better visibility
-                renderer.render(scene, camera);
-            }
-            animate();
-        }, undefined, function (error) {
-            console.error('An error happened while loading the OBJ file:', error);
-        });
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
     }
+    animate();
+}
 
-    // Initialize meshes
-    meshes.forEach(mesh => addMesh(mesh.id, mesh.url));
+// Ensure the script runs after the page is loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    initMeshViewer();
 });
